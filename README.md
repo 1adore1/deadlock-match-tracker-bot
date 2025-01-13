@@ -39,6 +39,7 @@ A Telegram bot for tracking real-time Deadlock matches of top 250 players. The b
 ## Data Collecting:
 **Deadlock API**
 - Historical data (67k matches) was fetched from `https://analytics.deadlock-api.com/`.
+- Total 250k rows match data, that were scrapped at different time.
 - Information about each new match is fetched from `https://data.deadlock-api.com/`.
 
 ## Bot Commands
