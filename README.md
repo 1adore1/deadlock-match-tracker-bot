@@ -1,6 +1,6 @@
 # Deadlock Match Tracker Bot
 
-[](https://github.com/1adore1/deadlock-match-tracker-bot/blob/main/assets/img.jpg)
+![Example](https://github.com/1adore1/deadlock-match-tracker-bot/raw/main/assets/img.jpg)
 
 ### Overview
 A Telegram bot for tracking real-time Deadlock matches of top 250 players. The bot fetches match data using the Deadlock API and predicts the likely match winner using a machine learning model.
