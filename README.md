@@ -49,8 +49,9 @@ deadlock-match-tracker-bot/
    ```
 
 ## Usage
-1. Run the Telegram bot:
+1. Enter your telegram bot API_KEY in `src/config.py`.
+2. Run the Telegram bot:
    ```
    python src/tg_bot.py
    ```
-2. Interact with the bot via Telegram to get match analytics and predictions.
+3. Interact with the bot via Telegram to get match analytics and predictions.
