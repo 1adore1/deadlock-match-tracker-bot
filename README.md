@@ -1,5 +1,5 @@
 # Deadlock Match Tracker Bot
-
+![Example image](https://github.com/1adore1/deadlock-match-tracker-bot/blob/main/assets/img.jpg)
 ## Description
 Deadlock Match Tracker Bot is a Telegram bot designed to track and analyze matches in the game Deadlock for top 250 players of the leaderboard. It collects match data, processes it, and provides insights using a trained machine learning model.
 
