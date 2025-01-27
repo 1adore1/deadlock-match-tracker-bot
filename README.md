@@ -1,67 +1,56 @@
 # Deadlock Match Tracker Bot
 
-![Example](https://github.com/1adore1/deadlock-match-tracker-bot/raw/main/assets/img.jpg)
+## Description
+Deadlock Match Tracker Bot is a Telegram bot designed to track and analyze matches in the game Deadlock for top 250 players of the leaderboard. It collects match data, processes it, and provides insights using a trained machine learning model.
 
-### Overview
-A Telegram bot for tracking real-time Deadlock matches for top 250 players of the leaderboad. The bot fetches match data using the Deadlock API and predicts the likely match winner using a machine learning model.
+## Features
+- Fetch and store match data
+- Process and clean match results
+- Train a machine learning model for match predictions
+- Provide match analysis via a Telegram bot
 
-### Features:
-- Real-time tracking of Deadlock matches for top 250 players of the leaderboard.
-- Predicts match winners using LightGBM.
-- Achieves ROC-AUC at 71% in predicting match outcomes.
-- Displays match details such as net worth, heroes, and match score.
-- Allows users to refresh match details dynamically with a button click.
+## Machine Learning Model
+- Used **LightGBM** for match prediction
+- Achieved **ROC AUC = 0.71**
+- Used **Optuna** for hyperparameter tuning
+
+## Project Structure
+```
+deadlock-match-tracker-bot/
+│── 📂 assets/               # Media files
+│   │── img.jpg             # Example image
+│── 📂 data/                 # Datasets used in the project
+│   │── clean_data.csv       # Processed match data
+│   │── match_results.csv    # Raw match results
+│── 📂 models/               # Trained machine learning models
+│   │── model.joblib         # Serialized model file
+│── 📂 notebooks/            # Jupyter notebooks for data processing and model training
+│   │── fetch_data.ipynb     # Notebook for data collection
+│   │── process_data.ipynb   # Notebook for data preprocessing
+│   │── train_data.ipynb     # Notebook for model training
+│── 📂 src/                  # Source code of the project
+│   │── tg_bot.py            # Telegram bot implementation
+│   │── tools.py             # Utility functions
+│── requirements.txt         # List of dependencies
+```
 
 ## Installation
-
-**Requirements**:
-- Python 3.10 or higher
-- Required Python packages listed in `requirements.txt`
-
-### Setup:
 1. Clone the repository:
    ```
-   git clone https://github.com/1adore1/deadlock-matches
-   cd deadlock-matches
+   git clone https://github.com/1adore1/deadlock-match-tracker-bot.git
    ```
-2. Install dependencies:
+2. Navigate to the project directory:
+   ```
+   cd deadlock-match-tracker-bot
+   ```
+3. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
-3. Configure the bot token:
-     Add your bot's API token in `config.py`:
-     ```
-     API_TOKEN = "your_bot_token_here"
-     ```
-4. Run the bot:
+
+## Usage
+1. Run the Telegram bot:
    ```
-   python tg_bot.py
+   python src/tg_bot.py
    ```
-
-## Data Collecting:
-**Deadlock API**
-- Historical data (67k matches) was fetched from `https://analytics.deadlock-api.com/`.
-- Total 250k rows match data, that were scrapped at different time.
-- Information about each new match is fetched from `https://data.deadlock-api.com/`.
-
-## Bot Commands
-
-### `/start`
-- Displays the bot's welcome message and shows a button to enter a Steam profile.
-
-### `/check`
-- Prompts the user to enter Steam profile URL to check active matches.
-
-## How to Use
-
-1. Start the bot with `/start`.
-2. Use the `Check account (Top 250)` button or `/check` command to check for active games by entering a Steam account.
-3. If a match is found, the bot will display detailed match data.
-4. Use the `Refresh Match Info` button to update match details dynamically.
-
-## Code Structure
-
-- **`tg_bot.py`**: Main script for running the bot.
-- **`tools.py`**: Contains utility functions for fetching and processing Steam and match data.
-- **`config.py`**: Holds bot configuration, such as the API token of telegram bot.
-- **`models/model.joblib`**: Pretrained lgb model for match predictions.
+2. Interact with the bot via Telegram to get match analytics and predictions.
