@@ -3,12 +3,12 @@
 ![Example](https://github.com/1adore1/deadlock-match-tracker-bot/raw/main/assets/img.jpg)
 
 ### Overview
-A Telegram bot for tracking real-time Deadlock matches for top 250 players of leaderboad. The bot fetches match data using the Deadlock API and predicts the likely match winner using a machine learning model.
+A Telegram bot for tracking real-time Deadlock matches for top 250 players of the leaderboad. The bot fetches match data using the Deadlock API and predicts the likely match winner using a machine learning model.
 
 ### Features:
-- Real-time tracking of Deadlock matches for top 250 leaderboard players.
-- Predicts match winners using a Gradient Boosting model.
-- Achieves ROC-AUC at 70% in predicting match outcomes.
+- Real-time tracking of Deadlock matches for top 250 players of the leaderboard.
+- Predicts match winners using LightGBM.
+- Achieves ROC-AUC at 71% in predicting match outcomes.
 - Displays match details such as net worth, heroes, and match score.
 - Allows users to refresh match details dynamically with a button click.
 
@@ -64,4 +64,4 @@ A Telegram bot for tracking real-time Deadlock matches for top 250 players of le
 - **`tg_bot.py`**: Main script for running the bot.
 - **`tools.py`**: Contains utility functions for fetching and processing Steam and match data.
 - **`config.py`**: Holds bot configuration, such as the API token of telegram bot.
-- **`models/model.joblib`**: Pretrained gradient boosting model for match predictions.
+- **`models/model.joblib`**: Pretrained lgb model for match predictions.
